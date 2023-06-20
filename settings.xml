@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                              http://maven.apache.org/xsd/settings-1.0.0.xsd">
+<!--    <profiles>-->
+<!--        &lt;!&ndash; Add your project-specific profile here &ndash;&gt;-->
+<!--        <profile>-->
+<!--            <id>my-project-profile</id>-->
+<!--            &lt;!&ndash; Add configuration specific to your project &ndash;&gt;-->
+<!--        </profile>-->
+<!--    </profiles>-->
+<!--    <activeProfiles>-->
+<!--        &lt;!&ndash; Activate the project-specific profile &ndash;&gt;-->
+<!--        <activeProfile>my-project-profile</activeProfile>-->
+<!--    </activeProfiles>-->
+</settings>
