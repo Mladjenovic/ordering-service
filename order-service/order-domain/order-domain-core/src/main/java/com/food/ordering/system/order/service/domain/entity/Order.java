@@ -65,9 +65,9 @@ public class Order extends AggregateRoot<OrderId> {
         updateFailureMessages(failureMessages);
     }
 
-    private void validateItemsPrice() {
+    private void validateInitialOrder() {
         if (orderStatus != null || getId() != null) {
-            throw new OrderDomainException("Order is not in correct state for initializaton");
+            throw new OrderDomainException("Order is not in correct state for initialization");
         }
     }
 
@@ -77,7 +77,7 @@ public class Order extends AggregateRoot<OrderId> {
         }
     }
 
-    private void validateInitialOrder() {
+    private void validateItemsPrice() {
         Money orderItemsTotal = items.stream().map(orderItem -> {
             validateItemPrice(orderItem);
             return orderItem.getSubTotal();
@@ -100,7 +100,7 @@ public class Order extends AggregateRoot<OrderId> {
 
     private void validateItemPrice(OrderItem orderItem) {
         if (!orderItem.isPriceValid()){
-            throw new OrderDomainException("Order item prie: " +  orderItem.getPrice().getAmount() +
+            throw new OrderDomainException("Order item price: " +  orderItem.getPrice().getAmount() +
                     " is not valid for product " + orderItem.getProduct().getId().getValue());
         }
     }
