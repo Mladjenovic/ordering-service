@@ -50,7 +50,7 @@ public class GlobalExceptionHandler {
     }
 
     private String extractViolationsFromException(ConstraintViolationException validationException) {
-        validationException.getConstraintViolations()
+        return validationException.getConstraintViolations()
                 .stream()
                 .map(ConstraintViolation::getMessage)
                 .collect(Collectors.joining("--"));
