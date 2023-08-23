@@ -13,10 +13,10 @@ import java.util.List;
 @AllArgsConstructor
 public class RestaurantApprovalResponse {
     private String id;
-    private String sadaId;
+    private String sagaId;
     private String orderId;
     private String restaurantId;
     private Instant createdAt;
     private OrderApprovalStatus orderApprovalStatus;
-    private List<String> failureMessage;
+    private List<String> failureMessages;
 }
